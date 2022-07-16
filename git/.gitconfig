@@ -1,0 +1,10 @@
+[user]
+	name = ChrisAmora
+	email = 27789416+ChrisAmora@users.noreply.github.com
+[core]
+	excludesfile = ~/.gitignore_global
+    editor = nvim
+[pull]
+	ff = only
+[init]
+	defaultBranch = main

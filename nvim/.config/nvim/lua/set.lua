@@ -18,8 +18,8 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = "undodir"
-vim.opt.undofile = true
+-- vim.opt.undodir = "undodir"
+-- vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

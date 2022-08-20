@@ -4,6 +4,7 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
   use 'hrsh7th/cmp-nvim-lsp'
@@ -12,16 +13,15 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-  --treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-}
+  }
 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+  }
 
  -- For luasnip users.
   use 'L3MON4D3/LuaSnip'

@@ -3,14 +3,10 @@ eval "$(starship init zsh)"
 alias vim='nvim'
 alias cat='batcat'
 alias ls='exa'
-alias luamake=/home/zvist/code/lua-language-server/3rd/luamake/luamake
-
-
-export NVM_DIR="$HOME/.nvm"
-export NVM_COMPLETION=true
 
 # Golang
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
+
 # VSCode
 export PATH="$PATH:/mnt/c/Users/chris/AppData/Local/Programs/Microsoft VS Code/bin"
 
@@ -19,6 +15,8 @@ export PATH=$PATH:~/.cargo/bin
 
 export PATH="/home/zvist/.local/bin:$PATH"
 export PATH=$PATH:/home/zvist/code/lua-language-server/bin
+
+precmd () {print -Pn "\e]0;%~\a"}
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

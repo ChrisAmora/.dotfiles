@@ -9,7 +9,6 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false

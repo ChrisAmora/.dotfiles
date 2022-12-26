@@ -13,6 +13,7 @@ vim.keymap.set('n', '<leader>gf', builtin.git_files, {desc = '[G]it [F]ind'})
 vim.keymap.set('n', '<leader>km', builtin.keymaps, {desc = '[K]ey[M]aps'})
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, {desc = '[L]ive[Grep]'})
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+vim.keymap.set("n", "<leader>ff", ":Format<CR>") -- Format Files
 
-
+-- For Splits on Windows
 map("n", "<leader>w", "<C-w>", { silent = true})

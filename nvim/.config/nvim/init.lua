@@ -48,7 +48,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
-  use {'dracula/vim', as = 'dracula'}
+  use { 'dracula/vim', as = 'dracula' }
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
@@ -187,14 +187,15 @@ require('gitsigns').setup {
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
+  -- pickers = {find_files = {hidden = true}},
   defaults = {
     mappings = {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
       },
-    },
-  },
+    }
+  }
 }
 
 -- Enable telescope fzf native, if installed

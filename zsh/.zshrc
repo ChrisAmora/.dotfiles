@@ -3,7 +3,7 @@ eval "$(starship init zsh)"
 alias vim='nvim'
 alias cat='batcat'
 alias ls='exa'
-
+alias lg='lazygit'
 # Golang
 export PATH=$PATH:~/go/bin
 

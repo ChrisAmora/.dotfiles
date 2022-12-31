@@ -23,6 +23,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+
 # opam configuration
 [[ ! -r /home/zvist/.opam/opam-init/init.zsh ]] || source /home/zvist/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 

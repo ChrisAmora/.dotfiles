@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 
-function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
     if opts then
         options = vim.tbl_extend("force", options, opts)
@@ -18,3 +18,7 @@ vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>") -- Format Files
 
 -- For Splits on Windows
 map("n", "<leader>w", "<C-w>", { silent = true})
+
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")

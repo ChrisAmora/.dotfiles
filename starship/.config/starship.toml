@@ -1,0 +1,10 @@
+# Prevent slow modules from hanging the prompt
+command_timeout = 500
+
+# Show the default branch name (main vs master) next to git branch
+[custom.default_branch]
+command = "git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null | cut -d'/' -f2"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+shell = ["bash", "--noprofile", "--norc"]  # skip login-shell overhead
+style = "bold yellow"
+format = "[$output]($style) "

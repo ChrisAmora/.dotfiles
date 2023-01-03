@@ -1,0 +1,5 @@
+task 3.35
+golang 1.24
+nodejs 24
+rust 1.83
+golangci-lint 1.64

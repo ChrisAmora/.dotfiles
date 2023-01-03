@@ -3,8 +3,13 @@
 	email = 27789416+ChrisAmora@users.noreply.github.com
 [core]
 	excludesfile = ~/.gitignore_global
-    editor = nvim
+	editor = nvim
+	; editor = code --wait
 [pull]
 	ff = only
 [init]
 	defaultBranch = main
+[diff]
+	tool = vimdiff2
+[push]
+	autoSetupRemote = true

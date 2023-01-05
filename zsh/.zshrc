@@ -1,11 +1,11 @@
 eval "$(starship init zsh)"
 
-source ./.git-alias.zshrc
 
 alias vim='nvim'
 alias cat='batcat'
 alias ls='exa'
 alias lg='lazygit'
+
 # Golang
 export PATH=$PATH:~/go/bin
 
@@ -21,12 +21,15 @@ export PATH=$PATH:/home/zvist/code/lua-language-server/bin
 precmd () {print -Pn "\e]0;%~\a"}
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=30000
+SAVEHIST=30000
 setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
+source $HOME/.dotfiles/zsh/.git-alias.zshrc
 
 # opam configuration
 [[ ! -r /home/zvist/.opam/opam-init/init.zsh ]] || source /home/zvist/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
@@ -42,3 +45,4 @@ autoload -Uz compinit && compinit
 export PNPM_HOME="/home/zvist/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+eval "$(zoxide init zsh)"

@@ -1,5 +1,7 @@
 eval "$(starship init zsh)"
 
+source ./.git-alias.zshrc
+
 alias vim='nvim'
 alias cat='batcat'
 alias ls='exa'

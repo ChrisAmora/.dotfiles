@@ -26,6 +26,7 @@ SAVEHIST=30000
 setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
+set -o vi
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh

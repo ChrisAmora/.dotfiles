@@ -6,5 +6,3 @@ return function(use)
         use("nvim-tree/nvim-web-devicons")
         use("windwp/nvim-autopairs")
 end
-
-

@@ -16,7 +16,6 @@ export PATH="$PATH:/mnt/c/Users/chris/AppData/Local/Programs/Microsoft VS Code/b
 export PATH=$PATH:~/.cargo/bin
 
 export PATH="/home/zvist/.local/bin:$PATH"
-export PATH=$PATH:/home/zvist/code/lua-language-server/bin
 
 precmd () {print -Pn "\e]0;%~\a"}
 
@@ -39,6 +38,7 @@ source $HOME/.dotfiles/zsh/.git-alias.zshrc
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
@@ -46,4 +46,5 @@ autoload -Uz compinit && compinit
 export PNPM_HOME="/home/zvist/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
 eval "$(zoxide init zsh)"

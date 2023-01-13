@@ -7,7 +7,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 yabai -m config window_origin_display        default
-yabai -m config window_placement             second_child
+yabai -m config window_placement             first_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                on
 yabai -m config window_opacity               off
@@ -34,12 +34,29 @@ yabai -m config left_padding                 12
 yabai -m config right_padding                12
 yabai -m config window_gap                   06
 
-yabai -m config window_border off
+yabai -m space 1 --label I
+yabai -m space 2 --label II
+yabai -m space 3 --label III
+yabai -m space 4 --label IV
+yabai -m space 5 --label V
+yabai -m space 6 --label VI
+yabai -m space 7 --label VII
+yabai -m space 8 --label VIII
+yabai -m space 9 --label IX
+yabai -m space 10 --label X
 
-# enable window borders
-yabai -m config window_border on
-yabai -m config window_border_width 6
-yabai -m config active_window_border_color 0xFF6A0DAD
-yabai -m config normal_window_border_color 0xFFFF0000
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Google Chrome$" space=1
+yabai -m rule --add app="^Code$" space=2
+yabai -m rule --add app="^kitty$" space=2
+# yabai -m rule --add app="^Slack$" space=3
+yabai -m rule --add app="^Notes$" space=3
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app='^zoom\.us$' space=4
+yabai -m rule --add app='^Spotify$' space=5
+yabai -m rule --add app='^Postman$' space=6
+# yabai -m rule --add app='^zoom\.us$' native-fullscreen=on
+# yabai -m config external_bar all:27:0
 
 echo "yabai configuration loaded.."

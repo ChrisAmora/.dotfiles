@@ -9,10 +9,6 @@ alias lg='lazygit'
 # Golang
 export PATH=$PATH:~/go/bin
 
-# VSCode
-export PATH="$PATH:/mnt/c/Users/chris/AppData/Local/Programs/Microsoft VS Code/bin"
-
-# Cargo
 export PATH=$PATH:~/.cargo/bin
 
 export PATH="/home/zvist/.local/bin:$PATH"

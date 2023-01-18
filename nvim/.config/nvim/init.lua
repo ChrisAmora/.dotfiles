@@ -10,6 +10,7 @@ end
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
+  use "rafamadriz/friendly-snippets"
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -384,6 +385,8 @@ require('fidget').setup()
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup {
   snippet = {

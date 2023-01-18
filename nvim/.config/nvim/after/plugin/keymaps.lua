@@ -9,7 +9,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 local project_files = function()
-    local opts = {} -- define here if you want to define something
+    local opts = { show_untracked = true }
     vim.fn.system('git rev-parse --is-inside-work-tree')
     if vim.v.shell_error == 0 then
         require "telescope.builtin".git_files(opts)
@@ -21,7 +21,6 @@ end
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = '[P]re[V]iews' })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = '[G]it [F]ind' })
 vim.keymap.set('n', '<leader>km', builtin.keymaps, { desc = '[K]ey[M]aps' })
--- vim.keymap.set('n', '<leader>lg', builtin.live_grep, {desc = '[L]ive[Grep]'})
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = 'Tr[ee]Toggle' }) -- toggle file explorer
 vim.keymap.set("n", "<leader>ff", ":Format<CR>", { desc = '[F]ormat[F]ile' }) -- Format Files
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = '[L]azy[G]it' }) -- Format Files

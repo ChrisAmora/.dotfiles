@@ -24,6 +24,7 @@ vim.keymap.set('n', '<leader>km', builtin.keymaps, { desc = '[K]ey[M]aps' })
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = 'Tr[ee]Toggle' }) -- toggle file explorer
 vim.keymap.set("n", "<leader>ff", ":Format<CR>", { desc = '[F]ormat[F]ile' }) -- Format Files
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = '[L]azy[G]it' }) -- Format Files
+vim.keymap.set("n", "<leader>aff", ":write | edit | TSBufEnable highlight<CR>", { desc = 'FixTreeSitter' })
 vim.keymap.set('n', '<leader>sf', project_files, { desc = '[S]earch [F]iles' })
 -- For Splits on Windows
 map("n", "<leader>w", "<C-w>", { silent = true })

@@ -18,6 +18,18 @@ local project_files = function()
     end
 end
 
+
+local diagnostics_active = true
+local toggle_diagnostics = function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.show()
+  else
+    vim.diagnostic.hide()
+  end
+end
+
+vim.keymap.set('n', '<leader>tt', toggle_diagnostics)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = '[P]re[V]iews' })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = '[G]it [F]ind' })
 vim.keymap.set('n', '<leader>km', builtin.keymaps, { desc = '[K]ey[M]aps' })

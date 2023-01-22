@@ -21,9 +21,12 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    custom = {
+      "^\\.git"
+    }
+    -- dotfiles = true,
   },
-   -- disable window_picker for
+  -- disable window_picker for
   -- explorer to work well with
   -- window splits
   actions = {

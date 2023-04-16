@@ -23,8 +23,8 @@ export PATH="/home/zvist/.local/bin:$PATH"
 precmd () {print -Pn "\e]0;%~\a"}
 
 HISTFILE=~/.zsh_history
-HISTSIZE=30000
-SAVEHIST=30000
+HISTSIZE=90000
+SAVEHIST=90000
 setopt appendhistory
 setopt sharehistory
 setopt incappendhistory

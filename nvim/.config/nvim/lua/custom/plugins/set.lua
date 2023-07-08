@@ -22,3 +22,5 @@ vim.opt.cmdheight = 1
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
+
+return {}

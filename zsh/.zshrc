@@ -6,9 +6,9 @@ alias cat='batcat'
 alias ls='exa'
 alias lg='lazygit'
 
-export FZF_DEFAULT_OPTS="-m --height 50% --layout=reverse --border --inline-info 
+export FZF_DEFAULT_OPTS="-m --height 50% --layout=reverse --border --inline-info
   --preview '([[ -f {} ]] && (batcat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
-  --bind '?:toggle-preview' 
+  --bind '?:toggle-preview'
 "
 
 export FZF_DEFAULT_COMMAND='fd --type file --hidden --exclude .git'
@@ -54,5 +54,7 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+export BROWSER='/mnt/c/Windows/explorer.exe'
 
 eval "$(zoxide init zsh)"

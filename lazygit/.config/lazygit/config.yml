@@ -1,0 +1,6 @@
+gui:
+  nerdFontsVersion: "3"
+
+pager:
+  colorArg: always
+  useConfig: true  # uses core.pager from .gitconfig (delta)

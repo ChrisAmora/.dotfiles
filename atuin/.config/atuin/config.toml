@@ -1,0 +1,12 @@
+# Sync is disabled — history is stored locally only at ~/.local/share/atuin/
+# To enable sync with a self-hosted server, set sync_address and run: atuin register
+auto_sync = false
+sync_address = ""
+
+search_mode = "fuzzy"
+filter_mode = "host"    # show only this machine's history by default
+style = "compact"
+enter_accept = true     # run command immediately on enter (no extra confirm)
+
+[ui]
+columns = ["time", "command"]  # hide duration (0s noise)

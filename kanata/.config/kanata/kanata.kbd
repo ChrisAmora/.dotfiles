@@ -1,0 +1,43 @@
+#|
+  CapsLock behavior:
+  - Tap  → Escape
+  - Hold → vim navigation layer (hjkl = arrows, nm,. = home/pgdn/pgup/end, ; = end-of-line)
+
+  Platform notes:
+  - M-rght (;) in vim-nav = Cmd+Right on macOS (end of line) ✓
+                            Win+Right on Windows (snap window) ✗ — change to _ if using on Windows
+
+  Performance: defsrc is minimal (only remapped keys) + process-unmapped-keys no,
+  so all other keys bypass kanata entirely with no latency.
+
+  TODO: when Raycast is set up, switch cap hold to:
+    (multi lsft lctl lalt lmet)
+  Then configure in Raycast: Hyper+h/j/k/l → arrows, Hyper+; → Cmd+Right, etc.
+  and remove the vim-nav layer.
+|#
+
+(defcfg
+  process-unmapped-keys no
+)
+
+(defsrc
+  caps
+  h    j    k    l    ;
+  n    m    ,    .
+)
+
+(deflayer default
+  @cap
+  h    j    k    l    ;
+  n    m    ,    .
+)
+
+(deflayer vim-nav
+  _
+  left down up   rght M-rght
+  home pgdn pgup end
+)
+
+(defalias
+  cap (tap-hold-press 200 200 esc (layer-while-held vim-nav))
+)

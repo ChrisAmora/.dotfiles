@@ -8,5 +8,35 @@ filter_mode = "host"    # show only this machine's history by default
 style = "compact"
 enter_accept = true     # run command immediately on enter (no extra confirm)
 
+# Prevent sensitive commands from being stored in atuin's SQLite database.
+history_filter = [
+  ".*access_token.*",
+  ".*accesstoken.*",
+  "AKIA[0-9A-Z]{16}",
+  ".*api_key.*",
+  ".*apikey.*",
+  ".*authonly.*",
+  ".*authorization.*",
+  ".*aws_access_key_id.*",
+  ".*aws_secret_access_key.*",
+  ".*bearer.*",
+  ".*client.secret.*",
+  ".*current_key.*",
+  ".*gh_token.*",
+  ".*github_token.*",
+  "hooks\\.slack\\.com",
+  ".*id.token.*",
+  ".*kubectl --token=.*",
+  ".*kubectl config set-credentials.*",
+  ".*pagerduty_.*",
+  ".*password.*",
+  ".*private_key.*",
+  ".*private_key_id.*",
+  ".*refresh.token.*",
+  ".*token.*",
+  ".*x-api-key.*",
+  ".*x-auth-key.*",
+]
+
 [ui]
 columns = ["time", "command"]  # hide duration (0s noise)

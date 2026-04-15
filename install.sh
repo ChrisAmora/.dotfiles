@@ -123,7 +123,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   elif command -v kanata &>/dev/null; then
     # sudoers entry so LaunchAgent can run kanata as root without a password prompt
     if [ ! -f "$sudoers_dst" ]; then
-      echo "$(whoami) ALL=(ALL) NOPASSWD: /usr/local/bin/kanata" | sudo tee "$sudoers_dst" > /dev/null
+      echo "$(whoami) ALL=(ALL) NOPASSWD: $(command -v kanata)" | sudo tee "$sudoers_dst" > /dev/null
       sudo chmod 440 "$sudoers_dst"
       printf "  [new]    %s\n" "$sudoers_dst"
     fi

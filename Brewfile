@@ -36,6 +36,7 @@ brew "yazi"
 brew "btop"
 
 # ── Dev tools ──────────────────────────────────────────────────────────────────
+brew "jq"
 brew "shellcheck"
 brew "shfmt"
 

@@ -106,6 +106,9 @@ echo "Prompt / tools"
 link "starship/.config/starship.toml"     "$HOME/.config/starship.toml"
 link "atuin/.config/atuin"                "$HOME/.config/atuin"
 link "mise/.tool-versions"                "$HOME/.tool-versions"
+if [[ "$(uname)" != "Darwin" ]]; then
+  link "mise/config.toml"                 "$HOME/.config/mise/config.toml"
+fi
 
 echo ""
 echo "macOS"

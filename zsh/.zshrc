@@ -24,7 +24,11 @@ setopt sharehistory
 setopt incappendhistory
 set -o vi
 
-command -v mise    &>/dev/null && eval "$(mise activate zsh)"
+export PATH="$HOME/.local/bin:$PATH"
+
+if command -v mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+fi
 autoload -Uz compinit && compinit -C  # -C skips security scan, uses cache — run compinit once after new tool installs
 
 # sourced after compinit so compdef calls inside take effect
@@ -51,7 +55,7 @@ _fzf_comprun() {
 }
 
 command -v direnv  &>/dev/null && eval "$(direnv hook zsh)"
-command -v zoxide  &>/dev/null && eval "$(zoxide init zsh --cmd cd)"
+[[ $- == *i* ]] && command -v zoxide &>/dev/null && eval "$(zoxide init zsh --cmd cd)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   _brew="${HOMEBREW_PREFIX:-/opt/homebrew}"  # env var set by brew shellenv; fallback for Apple Silicon

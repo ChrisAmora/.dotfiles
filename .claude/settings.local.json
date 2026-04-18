@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls *)",
+      "Bash(mise outdated *)",
+      "Bash(mise install *)",
+      "Bash(mise ls *)",
+      "Bash(mise exec *)",
+      "Bash(rtk diff *)",
+      "Bash(rtk ps *)"
+    ]
+  }
+}

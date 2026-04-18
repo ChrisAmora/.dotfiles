@@ -1,0 +1,13 @@
+[tools]
+"aqua:go-task/task" = "latest"
+"aqua:golangci/golangci-lint" = "latest"
+btop = "latest"
+eza = "latest"
+fd = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+atuin = "latest"
+zoxide = "latest"
+bat = "latest"
+fzf = "latest"
+direnv = "latest"
